@@ -8,8 +8,6 @@ class Node:
         """Search for a specific node in a tree using binary search.
            Uses recursion
         Rules:
-
-
         :param target: the node to be searched
         :return: the target node
         """

@@ -2,10 +2,10 @@ from binary_trees.tree import Node, Tree
 
 
 def main():
-    node = Node(10)
+    # node = Node(10)
 
     # A rede é do tipo binária, então os maiores valores ficam a direita
-    # enquanto os menorer, a esquerda.
+    # enquanto os menores, a esquerda.
     # node.left = Node(5)
     # node.right = Node(10)
     #
