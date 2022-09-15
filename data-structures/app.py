@@ -1,4 +1,5 @@
 from binary_trees.tree import Node, Tree
+from linked_lists.linked_lists import Node, LinkedList
 
 
 def main():
@@ -27,31 +28,53 @@ def main():
     # found = my_tree.search(220)
     # print(found)
 
-    tree = Tree(Node(50), "Transversal Tree")
-    tree.root.left = Node(25)
-    tree.root.right = Node(75)
-    tree.root.left.left = Node(10)
-    tree.root.left.right = Node(35)
-    tree.root.left.right.left = Node(30)
-    tree.root.left.right.right = Node(42)
-    tree.root.left.left.left = Node(5)
-    tree.root.left.left.right = Node(13)
-    tree.root.left.left.left.left = Node(2)
+    # tree = Tree(Node(50), "Transversal Tree")
+    # tree.root.left = Node(25)
+    # tree.root.right = Node(75)
+    # tree.root.left.left = Node(10)
+    # tree.root.left.right = Node(35)
+    # tree.root.left.right.left = Node(30)
+    # tree.root.left.right.right = Node(42)
+    # tree.root.left.left.left = Node(5)
+    # tree.root.left.left.right = Node(13)
+    # tree.root.left.left.left.left = Node(2)
+    #
+    # print("Transverse Pre-Order")
+    # tree.transverse_pre_order()
+    #
+    # print("Transverse In-Order")
+    # tree.transverse_in_order()
+    #
+    # print("Transverse Post-Order")
+    # tree.transverse_post_order()
+    #
+    # print("="*20)
+    # print(tree.height())
+    #
+    # tree = Tree(Node(50), "Árvore apenas com a raiz")
+    # print(tree.height())
 
-    print("Transverse Pre-Order")
-    tree.transverse_pre_order()
+    llist = LinkedList()
+    # Iniciamos com a criação do head
+    llist.head = Node(2)
+    second = Node(3)
+    third = Node(4)
+    # linkamos o primeiro node com o segundo
+    llist.head.next = second
+    # linkamos o primeiro node com o terceiro
+    second.next = third
 
-    print("Transverse In-Order")
-    tree.transverse_in_order()
+    # insere um novo dado no início da lista
+    llist.push(1)
 
-    print("Transverse Post-Order")
-    tree.transverse_post_order()
+    # insere um novo dado após o no second
+    llist.insert_after(second, 33)
 
-    print("="*20)
-    print(tree.height())
+    # insere um novo dado ao final da lista
+    llist.append(99)
 
-    tree = Tree(Node(50), "Árvore apenas com a raiz")
-    print(tree.height())
+    datas = llist.print_list()
+    print(datas)
 
 
 if __name__ == "__main__":
